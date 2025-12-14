@@ -8,6 +8,17 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Metadata } from "next";
+
+export const dynamic = "force-static";
+export const revalidate = 30;
+
+export const metadata: Metadata = {
+  title: "Blog | Nextjs 16 Tutorial",
+  description: "Read our latest articles and insights",
+  category: "web development",
+  authors: [{ name: "Jan marshal" }],
+};
 
 export default function BlogPage() {
   return (
